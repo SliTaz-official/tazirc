@@ -2,11 +2,11 @@ TazIRC - The SliTaz IRC tools
 ================================================================================
 
 
-TazIRC provide a small command line IRC client and a IRC Log Bot. Both are 
-entirely written in SHell script and using Busybox nc and libtaz functions.
-TazIRC can connect to all standardized IRC daemon, handle cmdline options and
-dont have any configuration file. Run tazirc/tazirc-lb without arguments to 
-get a short usage and list of options. Read below for some usage examples.
+TazIRC provides a small command line IRC client and a IRC Log Bot. Both are 
+entirely written in SHell script and use Busybox nc and libtaz functions.
+TazIRC can connect to all standardized IRC daemons, handle cmdline options and
+doesn't have a configuration file. Run tazirc/tazirc-lb without arguments to 
+get a short usage and list of options. See below for some usage examples.
 
 
 Installation
@@ -17,14 +17,14 @@ Installation
 
 TazIRC Usage
 ------------
-You can simply connect to a server then join a channel or directly join a channel
+You can simply connect to a server, then join a channel or directly join a channel
 using the --chan= option on cmdline. Run tazirc without arguments to get a short
 usage and list of options. Let's connect to SliTaz IRC channel on freenode as the
-so famous user tux:
+duly famous user tux:
 
 $ tazirc irc.freenode.net tux --chan=slitaz
 
-You can also connect to a server then join a channel with:
+You can also connect to a server, then join a channel with:
 
 $ tazirc irc.freenode.net tux
 $ /join #slitaz
@@ -35,9 +35,9 @@ TazIRC will handle a few short IRC commands:
 /q: QUIT
 
 
-TazIRC Lob Bot Usage
+TazIRC Log Bot Usage
 --------------------
-TazIRC-lb the IRC Log Bot can be combined with conspy or screen to have local or
+TazIRC-lb, the IRC Log Bot can be combined with conspy or screen to have local or
 online archives of various IRC channels. Let's log the official SliTaz channel on 
 Freenode:
 
