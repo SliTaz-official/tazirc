@@ -1,0 +1,86 @@
+# Brazilian Portuguese translations for TazIRC package.
+# Copyright (C) 2014 THE TazIRC'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the TazIRC package.
+# Claudinei Pereira <claudinei@slitaz.org>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TazIRC 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-14 23:15+0100\n"
+"PO-Revision-Date: 2014-01-14 17:46-0200\n"
+"Last-Translator: Claudinei Pereira <claudinei@slitaz.org>\n"
+"Language-Team: Brazilian Portuguese <i18n@slitaz.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: tazirc:26
+msgid "Auto-join a channel is optionnal"
+msgstr "Entrada automática no canal é opcional"
+
+#: tazirc:29 tazirc:31
+msgid "IRC server : "
+msgstr "Servidor IRC: "
+
+#: tazirc:34
+msgid "Nick name  : "
+msgstr "Apelido     : "
+
+#: tazirc:37
+msgid "Channel    : "
+msgstr "Canal       : "
+
+#: tazirc:41
+msgid "empty value"
+msgstr "valor vazio"
+
+#: tazirc:57 tazirc-lb:18
+msgid "Usage:"
+msgstr "Utilização:"
+
+#: tazirc:59 tazirc-lb:20
+msgid "Options:"
+msgstr "Opções:"
+
+#: tazirc:60
+msgid "Join specified channel after connection"
+msgstr "Entrar em um canal específico após conectar"
+
+#: tazirc:61 tazirc-lb:22
+msgid "Use specified mode. Default: +i"
+msgstr "Usar modo específico. Padrão: +i"
+
+#: tazirc:62 tazirc-lb:23
+msgid "Use specified port. Default: 6667"
+msgstr "Usar porta específica: Padrão: 6667"
+
+#: tazirc:63
+msgid "Will ask for server, nick and channel"
+msgstr "Solicitará servidor, apelido e canal"
+
+#: tazirc:89 tazirc-lb:44
+msgid "Connecting to:"
+msgstr "Conectando em:"
+
+#: tazirc:127
+msgid "Joining:"
+msgstr "Entrando:"
+
+#: tazirc:130
+msgid "Diconnecting from:"
+msgstr "Desconectando de:"
+
+#: tazirc:137
+msgid "No channel to send to"
+msgstr "Nenhum canal para enviar"
+
+#: tazirc-lb:21
+msgid "Set the Bot IRC nickname"
+msgstr "Definir o apelido do robô no IRC"
+
+#: tazirc-lb:24
+msgid "Logs files destination path"
+msgstr "Caminho dos arquivos de log"
