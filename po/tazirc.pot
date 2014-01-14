@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TazIRC 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-14 21:42+0100\n"
+"POT-Creation-Date: 2014-01-14 23:15+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,39 +17,63 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: tazirc:19 tazirc-lb:18
+#: tazirc:26
+msgid "Auto-join a channel is optionnal"
+msgstr ""
+
+#: tazirc:29 tazirc:31
+msgid "IRC server : "
+msgstr ""
+
+#: tazirc:34
+msgid "Nick name  : "
+msgstr ""
+
+#: tazirc:37
+msgid "Channel    : "
+msgstr ""
+
+#: tazirc:41
+msgid "empty value"
+msgstr ""
+
+#: tazirc:57 tazirc-lb:18
 msgid "Usage:"
 msgstr ""
 
-#: tazirc:21 tazirc-lb:20
+#: tazirc:59 tazirc-lb:20
 msgid "Options:"
 msgstr ""
 
-#: tazirc:22
+#: tazirc:60
 msgid "Join specified channel after connection"
 msgstr ""
 
-#: tazirc:23 tazirc-lb:22
+#: tazirc:61 tazirc-lb:22
 msgid "Use specified mode. Default: +i"
 msgstr ""
 
-#: tazirc:24 tazirc-lb:23
+#: tazirc:62 tazirc-lb:23
 msgid "Use specified port. Default: 6667"
 msgstr ""
 
-#: tazirc:57 tazirc-lb:44
+#: tazirc:63
+msgid "Will ask for server, nick and channel"
+msgstr ""
+
+#: tazirc:89 tazirc-lb:44
 msgid "Connecting to:"
 msgstr ""
 
-#: tazirc:93
+#: tazirc:127
 msgid "Joining:"
 msgstr ""
 
-#: tazirc:96
+#: tazirc:130
 msgid "Diconnecting from:"
 msgstr ""
 
-#: tazirc:103
+#: tazirc:137
 msgid "No channel to send to"
 msgstr ""
 

@@ -13,25 +13,58 @@
 TEXTDOMAIN='tazirc'
 export TEXTDOMAIN
 
-if [ ! "$1" ] || [ ! "$2" ]; then
+# Early function used by --ask
+logo() {
+	clear
+	colorize 30 "TazIRC - SliTaz IRC Client"
+}
+
+# Handle ask mode now. So we set $host $nick and optionnaly $chan
+# Ask only for a nick: tazirc --ask --host=irc.freenode.net --chan=slitaz
+if [ "$ask" ]; then
+	logo
+	gettext "Auto-join a channel is optionnal"; echo ""
+	newline
+	if [ "$host" ]; then
+		gettext "IRC server : "; echo "$host"
+	else
+		gettext "IRC server : "; read host
+	fi
+	if [ ! "$nick" ]; then 
+		gettext "Nick name  : "; read nick
+	fi
+	if [ ! "$chan" ]; then
+		gettext "Channel    : "; read chan
+	fi
+	newline
+	if [ ! "$host" ] || [ ! "$nick" ]; then
+		echo "$(colorize 31 'ERROR:') $(gettext 'empty value')"
+		newline && exit 0
+	fi
+fi
+
+# Cmdline --options= are parsed by libtaz.sh
+[ "$host" ] || host="$1"
+[ "$nick" ] || nick="$2"
+[ "$mode" ] || mode="+i"
+[ "$port" ] || port="6667"
+send="/tmp/tazirc/${host}.${nick}.$$.txt"
+
+# Help and usage without 2 cmdline args
+if [ ! "$host" ] || [ ! "$nick" ]; then
 	cat << EOT
 
-$(boldify "$(gettext 'Usage:')") $(basename $0) [host] [nick] [--option]" 
+$(boldify "$(gettext 'Usage:')") $(basename $0) [host] [nick] [--option]
 
 $(boldify "$(gettext 'Options:')")
   --chan=    $(gettext "Join specified channel after connection")
   --mode=    $(gettext "Use specified mode. Default: +i")
   --port=    $(gettext "Use specified port. Default: 6667")
+  --ask      $(gettext "Will ask for server, nick and channel")
 
 EOT
 	exit 0
 fi
-
-# Cmdline --options= are parsed by libtaz.sh
-[ "$mode" ] || mode="+i"
-[ "$port" ] || port="6667"
-host="$1" && nick="$2"
-send="/tmp/tazirc/${host}.${nick}.$$.txt"
 
 # Clean up on exit
 trap "echo 'Exiting...' && rm -f $send" SIGINT INT TERM
@@ -51,10 +84,11 @@ error() {
 # Start: send login commands to connect to server then handle commands
 #
 
-# Introduce me!
-clear
-colorize 30 "TazIRC - SliTaz IRC Client"
+# Hello World!
+[ ! "$ask" ] && logo
 boldify "$(gettext 'Connecting to:') $host $([ $chan ] && echo \#${chan})"
+
+# Login commands
 cat > ${send} << EOT
 NICK $nick
 USER $nick $mode * :$0
