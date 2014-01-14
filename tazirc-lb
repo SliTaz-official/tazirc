@@ -1,0 +1,74 @@
+#!/bin/sh
+#
+# TazIRC-lb - SliTaz IRC Log Bot : Keep it very small!
+#
+# Copyright 2014 (C) SliTaz GNU/Linux - BSD License
+# Author: Christophe Lincoln <pankso@slitaz.org>
+#
+. /lib/libtaz.sh
+
+# Internationalization
+TEXTDOMAIN='tazirc'
+export TEXTDOMAIN
+
+# Help and usage
+if [ ! "$1" ] || [ ! "$2" ]; then
+	cat << EOT
+
+$(boldify "$(gettext 'Usage:')") $(basename $0) [host] [chan] [--option]"
+
+$(boldify "$(gettext 'Options:')")
+  --nick=    $(gettext "Set the Bot IRC nickname")
+  --mode=    $(gettext "Use specified mode. Default: +i")
+  --port=    $(gettext "Use specified port. Default: 6667")
+  --dest=    $(gettext "Logs files destination path")
+
+EOT
+	exit 0
+fi
+
+# Cmdline --options= are parsed by libtaz.sh
+[ "$nick" ] || nick="TazIRC-lb"
+[ "$mode" ] || mode="+i"
+[ "$port" ] || port="6667"
+[ "$dest" ] || dest="$(pwd)"
+host="$1"
+chan="$2"
+send="$dest/$host/$chan/send.txt"
+
+# Clean up on exit
+trap "echo 'Exiting...' && rm -f $send" SIGINT INT TERM
+mkdir -p $(dirname $send)
+
+# Introduce me!
+clear && boldify "$(gettext 'Connecting to:') $host #${chan}"
+cat > ${send} << EOT
+NICK $nick
+USER $nick $mode * :$0
+JOIN #$chan
+EOT
+
+# Connect and handle server messages
+tail -f ${send} | busybox nc ${host} ${port} | while read MESSAGE
+do
+	# New log file for each day
+	logs="$dest/$host/$chan/$(date -u '+%F').log"
+	case "$MESSAGE" in
+		*NICK*) ;;
+		*PRIVMSG*)
+			# Display and log channel messages
+			user=$(echo "${MESSAGE%!*}" | sed s'/://')
+			text=$(echo "${MESSAGE#* :}")
+			echo "[$(date -u '+%R')] $user: $text"
+			echo "$(date -u '+%R')|$user|$text" >> ${logs} ;;
+		PING*)
+			# Responding to ping
+			echo "PONG${MESSAGE#PING}" >> ${send} ;;
+		*MODE*)
+			echo "${MESSAGE#* }" ;;
+		*)
+			echo "${MESSAGE#* :}" ;;
+	esac
+done
+
+exit 0

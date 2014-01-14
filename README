@@ -47,5 +47,18 @@ Use Ctrl-c to exit. You will find the logs in the current directory or you can
 use the --dest= option to set the output logs path.
 
 
+Translation
+-----------
+To start a new translation please use msginit from the pot file directory.
+Example for French/France locale (fr_FR):
+
+	$ msginit -l fr_FR -o fr.po -i tazbox.pot
+	
+To update all pot files when some new strings have been added (mainly for
+developers before commit) and to update all translations from the pot file:
+
+	$ make pot && make msgmerge
+
+
 ================================================================================
 
