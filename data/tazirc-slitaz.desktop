@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=SliTaz IRC channel
+Name[fr]=Canal IRC de SliTaz
+Exec=tazweb --notoolbar http://irc.slitaz.org/?webirc
+Icon=slitaz-icon
+Type=Application
+Categories=Application;Network;

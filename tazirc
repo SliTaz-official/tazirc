@@ -39,7 +39,7 @@ if [ "$ask" ]; then
 	newline
 	if [ ! "$host" ] || [ ! "$nick" ]; then
 		echo "$(colorize 31 'ERROR:') $(gettext 'empty value')"
-		newline && exit 0
+		newline && sleep 2 && exit 0
 	fi
 fi
 

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=TazIRC IRC client
+Name[fr]=Client IRC TazIRC
+Exec=terminal -e "tazirc --ask"
+Icon=slitaz-icon
+Type=Application
+Categories=Application;Network;

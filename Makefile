@@ -35,20 +35,19 @@ msgfmt:
 # Install
 
 install:
-	install -m 0777 -d $(DESTDIR)$(PREFIX)/bin
-	#install -m 0777 -d $(DESTDIR)$(PREFIX)/share/applications
-	install -m 0777 -d $(DESTDIR)$(PREFIX)/share/locale
+	install -m 0755 -d $(DESTDIR)$(PREFIX)/bin
+	install -m 0755 -d $(DESTDIR)$(PREFIX)/share/applications
+	install -m 0755 -d $(DESTDIR)$(PREFIX)/share/locale
 	install -m 0755 tazirc $(DESTDIR)$(PREFIX)/bin
 	install -m 0755 tazirc-lb $(DESTDIR)$(PREFIX)/bin
-	#install -m 0644 data/*.desktop \
-		#$(DESTDIR)$(PREFIX)/share/applications
+	install -m 0644 data/*.desktop $(DESTDIR)$(PREFIX)/share/applications
 	cp -a po/mo/* $(DESTDIR)$(PREFIX)/share/locale
 
 # Uninstall
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/tazirc*
-	#rm -f $(DESTDIR)$(PREFIX)/share/applications/tazirc*
+	rm -f $(DESTDIR)$(PREFIX)/share/applications/tazirc*
 	rm -rf $(DESTDIR)$(PREFIX)/share/locale/*/LC_MESSAGES/tazirc.mo
 
 # Clean
