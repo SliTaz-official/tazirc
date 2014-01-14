@@ -1,0 +1,110 @@
+#!/bin/sh
+#
+# TazIRC - SliTaz IRC client: Keep it small! Maybe use a plugins system
+# We use a single temporary text file to send commands to the IRC server
+# and handle custom user commands such /q to quit.
+#
+# Copyright 2014 (C) SliTaz GNU/Linux - BSD License
+# Author: Christophe Lincoln <pankso@slitaz.org>
+#
+. /lib/libtaz.sh
+
+# Internationalization
+TEXTDOMAIN='tazirc'
+export TEXTDOMAIN
+
+if [ ! "$1" ] || [ ! "$2" ]; then
+	cat << EOT
+
+$(boldify "$(gettext 'Usage:')") $(basename $0) [host] [nick] [--option]" 
+
+$(boldify "$(gettext 'Options:')")
+  --chan=    $(gettext "Join specified channel after connection")
+  --mode=    $(gettext "Use specified mode. Default: +i")
+  --port=    $(gettext "Use specified port. Default: 6667")
+
+EOT
+	exit 0
+fi
+
+# Cmdline --options= are parsed by libtaz.sh
+[ "$mode" ] || mode="+i"
+[ "$port" ] || port="6667"
+host="$1" && nick="$2"
+send="/tmp/tazirc/${host}.${nick}.$$.txt"
+
+# Clean up on exit
+trap "echo 'Exiting...' && rm -f $send" SIGINT INT TERM
+trap "kill 0" EXIT
+mkdir -p $(dirname $send)
+
+#
+# Functions
+#
+
+# Error message: error "Message blabla..."
+error() {
+	echo "$(colorize 31 'ERROR:') $1"
+}
+
+#
+# Start: send login commands to connect to server then handle commands
+#
+
+# Introduce me!
+clear
+colorize 30 "TazIRC - SliTaz IRC Client"
+boldify "$(gettext 'Connecting to:') $host $([ $chan ] && echo \#${chan})"
+cat > ${send} << EOT
+NICK $nick
+USER $nick $mode * :$0
+EOT
+[ "$chan" ] && echo "JOIN #${chan}" >> ${send}
+
+# Connect and handle server messages
+(tail -f ${send} | busybox nc ${host} ${port} | while read MESSAGE
+do
+	debug "$MESSAGE"
+	case "$MESSAGE" in
+		*" PRIVMSG "*)
+			# Display channel messages
+			user=$(echo "${MESSAGE%!*}" | sed s'/://')
+			text=$(echo "${MESSAGE#* :}")
+			echo "[$(date -u '+%R')] $(colorize 35 "$user"): $text" ;;
+		*" MODE "*)
+			echo "${MESSAGE#* }" ;;
+		PING*)
+			# Responding to ping
+			echo "PONG${MESSAGE#PING}" >> ${send} ;;
+		*)
+			echo "${MESSAGE#* :}" ;;
+	esac
+done) &
+
+# Handle user input commands/messages
+while read COMMAND
+do
+	# tazirc> prompt ?
+	# while true: echo -en "$(colorize 33 "tazirc")> "; read COMMAND
+	case "$COMMAND" in
+		"") continue ;;
+		/JOIN*|/join*|/j*)
+			chan="$(echo ${COMMAND} | cut -d '#' -f 2)"
+			boldify "$(gettext 'Joining:') #$chan"
+			echo "JOIN #$chan" >> ${send} ;;
+		/QUIT|/quit|/q)
+			boldify "$(gettext 'Diconnecting from:') $host"
+			echo "QUIT" >> ${send}
+			sleep 1 && rm -f ${send} && break ;;
+		/*)
+			echo "${COMMAND#/}" >> ${send} ;;
+		*)
+			if [ ! "$chan" ]; then
+				error "$(gettext 'No channel to send to')" && continue
+			fi
+			echo "[$(date -u '+%R')] $(colorize 34 "$nick"): ${COMMAND}"
+			echo "PRIVMSG #$chan :${COMMAND}" >> ${send} ;;
+	esac
+done
+
+exit 0
