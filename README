@@ -2,7 +2,7 @@ TazIRC - The SliTaz IRC tools
 ================================================================================
 
 
-TazIRC provides a small command line IRC client and a IRC Log Bot. Both are 
+TazIRC provides a small command line IRC client and an IRC Log Bot. Both are 
 entirely written in SHell script and use Busybox nc and libtaz functions.
 TazIRC can connect to all standardized IRC daemons, handle cmdline options and
 doesn't have a configuration file. Run tazirc/tazirc-lb without arguments to 

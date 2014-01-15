@@ -21,7 +21,7 @@ $(boldify "$(gettext 'Options:')")
   --nick=    $(gettext "Set the Bot IRC nickname")
   --mode=    $(gettext "Use specified mode. Default: +i")
   --port=    $(gettext "Use specified port. Default: 6667")
-  --dest=    $(gettext "Logs files destination path")
+  --dest=    $(gettext "Log files destination path")
 
 EOT
 	exit 0

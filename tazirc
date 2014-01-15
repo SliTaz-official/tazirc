@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# TazIRC - SliTaz IRC client: Keep it small! Maybe use a plugins system
+# TazIRC - SliTaz IRC client: Keep it small! Maybe use a plugins system.
 # We use a single temporary text file to send commands to the IRC server
 # and handle custom user commands such /q to quit.
 #
@@ -19,11 +19,11 @@ logo() {
 	colorize 30 "TazIRC - SliTaz IRC Client"
 }
 
-# Handle ask mode now. So we set $host $nick and optionnaly $chan
+# Handle ask mode now. So we set $host $nick and optionally $chan
 # Ask only for a nick: tazirc --ask --host=irc.freenode.net --chan=slitaz
 if [ "$ask" ]; then
 	logo
-	gettext "Auto-join a channel is optionnal"; echo ""
+	gettext "Auto-join a channel is optional"; echo ""
 	newline
 	if [ "$host" ]; then
 		gettext "IRC server : "; echo "$host"
@@ -81,7 +81,7 @@ error() {
 }
 
 #
-# Start: send login commands to connect to server then handle commands
+# Start: send login commands to connect to server, then handle commands
 #
 
 # Hello World!
@@ -127,7 +127,7 @@ do
 			boldify "$(gettext 'Joining:') #$chan"
 			echo "JOIN #$chan" >> ${send} ;;
 		/QUIT|/quit|/q)
-			boldify "$(gettext 'Diconnecting from:') $host"
+			boldify "$(gettext 'Disconnecting from:') $host"
 			echo "QUIT" >> ${send}
 			sleep 1 && rm -f ${send} && break ;;
 		/*)
