@@ -3,7 +3,7 @@
 
 PREFIX?=/usr
 DESTDIR?=
-LINGUAS?=fr pt_BR
+LINGUAS?=fr pt_BR ru
 
 VERSION=1.0
 

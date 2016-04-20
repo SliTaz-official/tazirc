@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Aleksej Bobylev <al.bobylev@gmail.com>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TazIRC 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-20 13:39+0300\n"
+"PO-Revision-Date: 2016-04-20 13:47+0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"Last-Translator: Aleksej Bobylev <al.bobylev@gmail.com>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: tazirc:26
+msgid "Auto-join a channel is optionnal"
+msgstr "Автоматическое присоединение к каналу является необязательным"
+
+#: tazirc:29 tazirc:31
+msgid "IRC server : "
+msgstr "Сервер IRC: "
+
+#: tazirc:34
+msgid "Nick name  : "
+msgstr "Прозвище: "
+
+#: tazirc:37
+msgid "Channel    : "
+msgstr "Канал: "
+
+#: tazirc:41
+msgid "empty value"
+msgstr "пустое значение"
+
+#: tazirc:57 tazirc-lb:18
+msgid "Usage:"
+msgstr "Использование:"
+
+#: tazirc:59 tazirc-lb:20
+msgid "Options:"
+msgstr "Параметры:"
+
+#: tazirc:60
+msgid "Join specified channel after connection"
+msgstr "Присоединиться к указанному каналу после подключения"
+
+#: tazirc:61 tazirc-lb:22
+msgid "Use specified mode. Default: +i"
+msgstr "Использовать указанный режим. По умолчанию: +i"
+
+#: tazirc:62 tazirc-lb:23
+msgid "Use specified port. Default: 6667"
+msgstr "Использовать указанный порт. По умолчанию: 6667"
+
+#: tazirc:63
+msgid "Will ask for server, nick and channel"
+msgstr "Спросит о сервере, нике и канале"
+
+#: tazirc:89 tazirc-lb:44
+msgid "Connecting to:"
+msgstr "Подключение к:"
+
+#: tazirc:127
+msgid "Joining:"
+msgstr "Присоединение:"
+
+#: tazirc:130
+msgid "Diconnecting from:"
+msgstr "Отключение от:"
+
+#: tazirc:137
+msgid "No channel to send to"
+msgstr "Нет ни одного канала, в который можно было бы отправить"
+
+#: tazirc-lb:21
+msgid "Set the Bot IRC nickname"
+msgstr "Установка IRC-псевдонима бота"
+
+#: tazirc-lb:24
+msgid "Logs files destination path"
+msgstr "Путь к файлам журнала"
