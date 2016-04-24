@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TazIRC 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-14 23:15+0100\n"
+"POT-Creation-Date: 2016-04-24 15:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: tazirc:26
-msgid "Auto-join a channel is optionnal"
+msgid "Auto-join a channel is optional"
 msgstr ""
 
 #: tazirc:29 tazirc:31
@@ -70,7 +70,7 @@ msgid "Joining:"
 msgstr ""
 
 #: tazirc:130
-msgid "Diconnecting from:"
+msgid "Disconnecting from:"
 msgstr ""
 
 #: tazirc:137
@@ -82,5 +82,5 @@ msgid "Set the Bot IRC nickname"
 msgstr ""
 
 #: tazirc-lb:24
-msgid "Logs files destination path"
+msgid "Log files destination path"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TazIRC 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-14 23:15+0100\n"
+"POT-Creation-Date: 2016-04-24 15:07+0100\n"
 "PO-Revision-Date: 2014-01-14 17:46-0200\n"
 "Last-Translator: Claudinei Pereira <claudinei@slitaz.org>\n"
 "Language-Team: Brazilian Portuguese <i18n@slitaz.org>\n"
@@ -18,7 +18,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: tazirc:26
-msgid "Auto-join a channel is optionnal"
+#, fuzzy
+msgid "Auto-join a channel is optional"
 msgstr "Entrada automática no canal é opcional"
 
 #: tazirc:29 tazirc:31
@@ -70,7 +71,8 @@ msgid "Joining:"
 msgstr "Entrando:"
 
 #: tazirc:130
-msgid "Diconnecting from:"
+#, fuzzy
+msgid "Disconnecting from:"
 msgstr "Desconectando de:"
 
 #: tazirc:137
@@ -82,5 +84,6 @@ msgid "Set the Bot IRC nickname"
 msgstr "Definir o apelido do robô no IRC"
 
 #: tazirc-lb:24
-msgid "Logs files destination path"
+#, fuzzy
+msgid "Log files destination path"
 msgstr "Caminho dos arquivos de log"

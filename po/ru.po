@@ -7,21 +7,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TazIRC 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-20 13:39+0300\n"
+"POT-Creation-Date: 2016-04-24 15:07+0100\n"
 "PO-Revision-Date: 2016-04-20 13:47+0300\n"
+"Last-Translator: Aleksej Bobylev <al.bobylev@gmail.com>\n"
 "Language-Team: \n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.6\n"
-"Last-Translator: Aleksej Bobylev <al.bobylev@gmail.com>\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: tazirc:26
-msgid "Auto-join a channel is optionnal"
+#, fuzzy
+msgid "Auto-join a channel is optional"
 msgstr "Автоматическое присоединение к каналу является необязательным"
 
 #: tazirc:29 tazirc:31
@@ -73,7 +75,8 @@ msgid "Joining:"
 msgstr "Присоединение:"
 
 #: tazirc:130
-msgid "Diconnecting from:"
+#, fuzzy
+msgid "Disconnecting from:"
 msgstr "Отключение от:"
 
 #: tazirc:137
@@ -85,5 +88,6 @@ msgid "Set the Bot IRC nickname"
 msgstr "Установка IRC-псевдонима бота"
 
 #: tazirc-lb:24
-msgid "Logs files destination path"
+#, fuzzy
+msgid "Log files destination path"
 msgstr "Путь к файлам журнала"

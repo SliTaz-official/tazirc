@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TazIRC 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-14 23:15+0100\n"
+"POT-Creation-Date: 2016-04-24 15:07+0100\n"
 "PO-Revision-Date: 2014-01-14 23:24+0100\n"
 "Last-Translator: Christophe Lincoln <pankso@slitaz.org>\n"
 "Language-Team: French\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: tazirc:26
-msgid "Auto-join a channel is optionnal"
+#, fuzzy
+msgid "Auto-join a channel is optional"
 msgstr "Rejoindre automatiquement un canal est une option"
 
-#: tazirc:29
-#: tazirc:31
+#: tazirc:29 tazirc:31
 msgid "IRC server : "
 msgstr "Server IRC : "
 
@@ -38,13 +38,11 @@ msgstr "Canal      : "
 msgid "empty value"
 msgstr "Valeure vide"
 
-#: tazirc:57
-#: tazirc-lb:18
+#: tazirc:57 tazirc-lb:18
 msgid "Usage:"
 msgstr "Utilisation:"
 
-#: tazirc:59
-#: tazirc-lb:20
+#: tazirc:59 tazirc-lb:20
 msgid "Options:"
 msgstr "Options:"
 
@@ -52,13 +50,11 @@ msgstr "Options:"
 msgid "Join specified channel after connection"
 msgstr "Joindre la canal après connection"
 
-#: tazirc:61
-#: tazirc-lb:22
+#: tazirc:61 tazirc-lb:22
 msgid "Use specified mode. Default: +i"
 msgstr "Utilise le mode spécifié. Défaut: +i"
 
-#: tazirc:62
-#: tazirc-lb:23
+#: tazirc:62 tazirc-lb:23
 msgid "Use specified port. Default: 6667"
 msgstr "Utilise le port spécifié. Défaut: 6667"
 
@@ -66,8 +62,7 @@ msgstr "Utilise le port spécifié. Défaut: 6667"
 msgid "Will ask for server, nick and channel"
 msgstr "Demande le nom de server, pseudo et canal"
 
-#: tazirc:89
-#: tazirc-lb:44
+#: tazirc:89 tazirc-lb:44
 msgid "Connecting to:"
 msgstr "Connection à:"
 
@@ -76,7 +71,8 @@ msgid "Joining:"
 msgstr "Adhésion à:"
 
 #: tazirc:130
-msgid "Diconnecting from:"
+#, fuzzy
+msgid "Disconnecting from:"
 msgstr "Déconnection de:"
 
 #: tazirc:137
@@ -88,7 +84,8 @@ msgid "Set the Bot IRC nickname"
 msgstr "Indique le pseudonyme du Bot"
 
 #: tazirc-lb:24
-msgid "Logs files destination path"
+#, fuzzy
+msgid "Log files destination path"
 msgstr "Destination des fichiers de log"
 
 #~ msgid "Use specified port. Default 6667"
