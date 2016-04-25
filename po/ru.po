@@ -22,7 +22,6 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: tazirc:26
-#, fuzzy
 msgid "Auto-join a channel is optional"
 msgstr "Автоматическое присоединение к каналу является необязательным"
 
@@ -75,7 +74,6 @@ msgid "Joining:"
 msgstr "Присоединение:"
 
 #: tazirc:130
-#, fuzzy
 msgid "Disconnecting from:"
 msgstr "Отключение от:"
 
@@ -88,6 +86,5 @@ msgid "Set the Bot IRC nickname"
 msgstr "Установка IRC-псевдонима бота"
 
 #: tazirc-lb:24
-#, fuzzy
 msgid "Log files destination path"
 msgstr "Путь к файлам журнала"

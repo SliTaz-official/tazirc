@@ -18,7 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: tazirc:26
-#, fuzzy
 msgid "Auto-join a channel is optional"
 msgstr "Entrada automática no canal é opcional"
 
@@ -71,7 +70,6 @@ msgid "Joining:"
 msgstr "Entrando:"
 
 #: tazirc:130
-#, fuzzy
 msgid "Disconnecting from:"
 msgstr "Desconectando de:"
 
@@ -84,6 +82,5 @@ msgid "Set the Bot IRC nickname"
 msgstr "Definir o apelido do robô no IRC"
 
 #: tazirc-lb:24
-#, fuzzy
 msgid "Log files destination path"
 msgstr "Caminho dos arquivos de log"
