@@ -1,0 +1,87 @@
+# Japanese translations for the tazirc package.
+# Copyright (C) 2017 SliTaz
+# This file is distributed under the same license as the tazirc package.
+# BALLOON a.k.a. Fu-sen. (Keiichi SHIGA) <balloonakafusen AT gmail DOT com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TazIRC 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-02 18:55+0900\n"
+"PO-Revision-Date: 2017-01-05 22:44+0900\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Last-Translator: BALLOON a.k.a. Fu-sen. (Keiichi SHIGA) <balloonakafusen　AT gmail DOT com>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: ja_JP\n"
+
+#: tazirc:26
+msgid "Auto-join a channel is optional"
+msgstr "チャンネルの自動参加はオプションです"
+
+#: tazirc:29 tazirc:31
+msgid "IRC server : "
+msgstr "IRC サーバー:"
+
+#: tazirc:34
+msgid "Nick name  : "
+msgstr "ニックネーム:"
+
+#: tazirc:37
+msgid "Channel    : "
+msgstr "チャンネル  :"
+
+#: tazirc:41
+msgid "empty value"
+msgstr "値が空です"
+
+#: tazirc:57 tazirc-lb:18
+msgid "Usage:"
+msgstr "用途:"
+
+#: tazirc:59 tazirc-lb:20
+msgid "Options:"
+msgstr "オプション:"
+
+#: tazirc:60
+msgid "Join specified channel after connection"
+msgstr "接続後に指定チャンネルに参加"
+
+#: tazirc:61 tazirc-lb:22
+msgid "Use specified mode. Default: +i"
+msgstr "指定モードの使用。 デフォルト: +i"
+
+#: tazirc:62 tazirc-lb:23
+msgid "Use specified port. Default: 6667"
+msgstr "特定ポートの使用. デフォルト: 6667"
+
+#: tazirc:63
+msgid "Will ask for server, nick and channel"
+msgstr "サーバー、ニックネーム、チャンネルを尋ねる"
+
+#: tazirc:89 tazirc-lb:44
+msgid "Connecting to:"
+msgstr "接続中:"
+
+#: tazirc:127
+msgid "Joining:"
+msgstr "参加中:"
+
+#: tazirc:130
+msgid "Disconnecting from:"
+msgstr "切断:"
+
+#: tazirc:137
+msgid "No channel to send to"
+msgstr "送信先キャンセルがありません"
+
+#: tazirc-lb:21
+msgid "Set the Bot IRC nickname"
+msgstr "Bot IRC ニックネームの設定"
+
+#: tazirc-lb:24
+msgid "Log files destination path"
+msgstr "ログファイルのパス"
