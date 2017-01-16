@@ -1,6 +1,6 @@
-# Vietnamese translations for the slitaz-base-files package.
+# Vietnamese translations for the tazirc package.
 # Copyright (C) 2017 SliTaz
-# This file is distributed under the same license as the slitaz-base-files package.
+# This file is distributed under the same license as the tazirc package.
 # Anh Bình <tuananh88c25@gmail.com>, 2017.
 #
 msgid ""
