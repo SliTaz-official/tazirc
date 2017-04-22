@@ -1,0 +1,86 @@
+# German translations for TazIRC package.
+# Copyright (C) 2017 SliTaz
+# This file is distributed under the same license as the TazIRC package.
+# Hans-Günter Theisgen, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TazIRC 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-24 15:07+0100\n"
+"PO-Revision-Date: 2017-04-22 16:37+0100\n"
+"Last-Translator: Hans-Günter Theisgen\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: tazirc:26
+msgid "Auto-join a channel is optional"
+msgstr "Automatisches Verbinden mit einem Kanal ist optional"
+
+#: tazirc:29 tazirc:31
+msgid "IRC server : "
+msgstr "IRC-Server : "
+
+#: tazirc:34
+msgid "Nick name  : "
+msgstr "Spitzname  : "
+
+#: tazirc:37
+msgid "Channel    : "
+msgstr "Kanal      : "
+
+#: tazirc:41
+msgid "empty value"
+msgstr "leerer Wert"
+
+#: tazirc:57 tazirc-lb:18
+msgid "Usage:"
+msgstr "Anwendung:"
+
+#: tazirc:59 tazirc-lb:20
+msgid "Options:"
+msgstr "Optionen:"
+
+#: tazirc:60
+msgid "Join specified channel after connection"
+msgstr "Nach Verbindungsaufbau mit dem angegebenen Kanal verbinden"
+
+#: tazirc:61 tazirc-lb:22
+msgid "Use specified mode. Default: +i"
+msgstr "Angegebenen Modus verwenden. Standard: +i"
+
+#: tazirc:62 tazirc-lb:23
+msgid "Use specified port. Default: 6667"
+msgstr "Angegebenen Port verwenden. Standard: 6667"
+
+#: tazirc:63
+msgid "Will ask for server, nick and channel"
+msgstr "Server, Spitzname und Kanal werden nachgefragt"
+
+#: tazirc:89 tazirc-lb:44
+msgid "Connecting to:"
+msgstr "Verbinden mit:"
+
+#: tazirc:127
+msgid "Joining:"
+msgstr "Beitreten:"
+
+#: tazirc:130
+msgid "Disconnecting from:"
+msgstr "Verbindung trennen von:"
+
+#: tazirc:137
+msgid "No channel to send to"
+msgstr "Kein Kanal, an den gesendet werden kann"
+
+#: tazirc-lb:21
+msgid "Set the Bot IRC nickname"
+msgstr ""
+
+#: tazirc-lb:24
+msgid "Log files destination path"
+msgstr "Pfad für Protokolldateien"
