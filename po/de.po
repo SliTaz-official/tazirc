@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: TazIRC 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-24 15:07+0100\n"
-"PO-Revision-Date: 2017-04-22 16:37+0100\n"
+"PO-Revision-Date: 2017-10-09 15:45+0100\n"
 "Last-Translator: Hans-Günter Theisgen\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -79,7 +79,7 @@ msgstr "Kein Kanal, an den gesendet werden kann"
 
 #: tazirc-lb:21
 msgid "Set the Bot IRC nickname"
-msgstr ""
+msgstr "IRC-Spitznamen für Bot festlegen"
 
 #: tazirc-lb:24
 msgid "Log files destination path"
